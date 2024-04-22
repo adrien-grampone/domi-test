@@ -1,0 +1,341 @@
+/* CARTE PEOPLE */
+
+.carte-people{
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.carte-people .carte-people-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.carte-people .carte-people-image{
+    display: flex;
+    position: relative;
+}
+
+.carte-people .carte-people-image img{
+    aspect-ratio: 75/75;
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.carte-people .carte-people-image.connected::after{
+    content: "";
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    background-color: var(--vert);
+}
+
+.carte-people .carte-people-info .sexe{
+    display: flex;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.carte-people .carte-people-info .sexe .icon div{
+    display: flex;
+}
+
+.carte-people .carte-people-info .sexe .icon div svg{
+    width: 20px;
+    height: 20px;
+}
+
+.carte-people .carte-people-info .sexe .icon.male div svg {
+    width: 25px;
+    height: 25px;
+}
+
+.carte-people .carte-people-info .certifie{
+    display: flex;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.carte-people .carte-people-info .certifie .icon div{
+    display: flex;
+}
+
+.carte-people .carte-people-info .certifie .icon div svg{
+    width: 16px;
+    height: 16px;
+}
+
+.carte-people .carte-people-info .carte-people-content > *{
+    margin: unset;
+}
+
+.carte-people .carte-people-info .carte-people-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carte-people .carte-people-info .carte-people-content .nom{
+    margin-top: 10px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.08px;
+    letter-spacing: 0.5px;
+    color: #000;
+}
+
+.carte-people .carte-people-info .carte-people-content .age,
+.carte-people .carte-people-info .carte-people-content .localisation{
+    margin-top: 7px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 11.73px;
+    letter-spacing: 0.5px;
+    color: #9F9F9F;
+    text-align: center;
+}
+
+.carte-people .carte-people-info .carte-people-content .localisation{
+    margin-top: 3px;
+    min-height: 12px;
+}
+
+.carte-people .carte-people-info .carte-people-content .tendance{
+    margin-top: 10px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 11.73px;
+    letter-spacing: 0.5px;
+    color: #C50000;
+}
+
+.carte-people .carte-people-actions{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.carte-people .carte-people-actions a,
+.carte-people .carte-people-actions .fav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+}
+
+.carte-people .carte-people-actions a.chat {
+    border-width: 1px 0px 0px 1px;
+    border-style: solid;
+    border-color: rgba(227, 226, 226, 1);
+}
+
+.carte-people .carte-people-actions .fav {
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: rgba(227, 226, 226, 1);
+}
+
+.carte-people .carte-people-actions .icon div{
+    display: flex;
+    cursor: pointer;
+}
+
+.carte-people .carte-people-actions a.chat .icon div svg{
+    width: 17px;
+    height: 15.5px;
+}
+
+.carte-people .carte-people-actions .fav .icon div svg{
+    width: 16.33px;
+    height: 16.33px;
+}
+
+.carte-people .carte-people-actions .fav .icon.actif div svg path,
+.carte-people .carte-people-actions .fav .icon:hover div svg path {
+    fill: yellow;
+}
+
+.carte-people .carte-people-actions .chat .icon:hover div svg path {
+    fill: var(--vert);
+}
+
+/* CARTE PEOPLE LISTING MODE*/
+
+.carte-people.listing{
+    flex-direction: row;
+}
+
+.carte-people.listing .carte-people-info{
+    width: 100%;
+    flex-direction: row;
+    position: relative;
+    gap: 15px;
+    padding: 9px 14px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.carte-people.listing .carte-people-info .carte-people-content{
+    align-items: flex-start;
+}
+
+.carte-people.listing .carte-people-actions{
+    grid-template-columns: 1fr;
+}
+
+.carte-people.listing .carte-people-actions .fav{
+    border-width: 0px 0px 0px 1px;
+}
+
+.carte-people.listing .carte-people-actions a{
+    padding: 10px 35px;
+}
+
+.carte-people.listing .carte-people-actions a.chat .icon div svg{
+    width: 23px;
+    height: 20px;
+}
+
+.carte-people.listing .carte-people-actions .fav .icon div svg{
+    width: 22px;
+    height: 22px;
+}
+
+.carte-people.listing .carte-people-info .carte-people-content .nom{
+    margin-top: 8px;
+}
+
+.carte-people.listing .carte-people-info .carte-people-content .tendance,
+.carte-people.listing .carte-people-info .carte-people-content .age{
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 992px) {
+    .carte-people .carte-people-info .sexe{
+        top: 10px;
+        right: 10px;
+    }
+
+    .carte-people .carte-people-info .sexe .icon div svg{
+        width: 25px;
+        height: 25px;
+    }
+
+    .carte-people .carte-people-info .certifie{
+        top: 10px;
+        left: 10px;
+    }
+
+    .carte-people .carte-people-info .certifie .icon div svg{
+        width: 20px;
+        height: 20px;
+    }
+
+    .carte-people .carte-people-info .sexe .icon.male div svg{
+        width: 32px;
+        height: 32px;
+    }
+
+    .carte-people .carte-people-info{
+        padding: 20px 0 15px;
+    }
+
+    .carte-people .carte-people-image img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .carte-people .carte-people-image.connected::after{
+        width: 24px;
+        height: 24px;
+    }
+
+    .carte-people .carte-people-info .carte-people-content .nom{
+        margin-top: 20px;
+        font-size: 15px;
+        line-height: 17.61px;
+    }
+
+    .carte-people .carte-people-info .carte-people-content .age,
+    .carte-people .carte-people-info .carte-people-content .localisation{
+        margin-top: 10px;
+        font-family: '__Raleway_98db86', sans-serif;
+        font-size: 11px;
+        line-height: 12.91px;
+    }
+
+    .carte-people .carte-people-info .carte-people-content .localisation{
+        margin-top: 5px;
+    }
+
+    .carte-people .carte-people-info .carte-people-content .tendance{
+        font-family: '__Raleway_98db86', sans-serif;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 14.09px;
+        margin-top: 5px;
+    }
+
+    .carte-people .carte-people-actions .fav .icon div svg{
+        width: 23px;
+        height: 25px;
+    }
+
+    .carte-people .carte-people-actions a.chat .icon div svg{
+        width: 26px;
+        height: 23px;
+    }
+
+    .carte-people .carte-people-actions a,
+    .carte-people .carte-people-actions .fav{
+        padding: 6px;
+    }
+
+    .carte-people.listing .carte-people-info .certifie{
+        top: 5px;
+        left: 5px;
+    }
+
+    .carte-people.listing .carte-people-info{
+        padding: 20px 27px;
+        gap: 27px;
+    }
+
+    .carte-people.listing .carte-people-info .sexe .icon div svg{
+        width: 30px;
+        height: 30px;
+    }
+
+    .carte-people.listing .carte-people-info .carte-people-content{
+        margin: auto 0;
+    }
+
+    .carte-people.listing .carte-people-actions .fav .icon div svg{
+        width: 36px;
+        height: 39px;
+    }
+
+    .carte-people.listing .carte-people-actions a.chat .icon div svg{
+        width: 40px;
+        height: 36px;
+    }
+
+    .carte-people.listing .carte-people-actions a{
+        padding: 20px 60px;
+    }
+}

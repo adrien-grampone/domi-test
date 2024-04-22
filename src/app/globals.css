@@ -1,0 +1,143 @@
+:root{
+    --rouge:#BE1212;
+    --gris:#373737;
+    --grisclair:#B8B8B8;
+    --grisclair2:#8A8A8A;
+    --grisfonce: #AFAFAF;
+    --blanc: #FFFFFF;
+    --grisfonce2: #BEBEBE;
+    --grisclaire3: #949494;
+    --vert: #0CB53B;
+}
+
+html{
+    display: flex;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+figure{
+    margin: 0;
+    display: flex;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.btn{
+    background: var(--rouge);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    border:0;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    min-width: 130px;
+    justify-content: center;
+}
+
+.desktop{
+    display: none;
+}
+
+.custom-input{
+    background: #FFFFFF;
+    border: 3px solid var(--rouge);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    width: 100%;
+    padding: 14px 20px;
+    outline: 0;
+}
+
+.custom-input::placeholder{
+    color: var(--grisclair2);
+}
+
+.message{
+    padding: 0.75rem 1.25rem;
+    margin: 1rem 0;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    width: fit-content;
+    text-align: right;
+    z-index: 1000;
+    transform: translateX(calc(100% + 10px));
+    transition: transform 0.3s ease-in-out;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.message.show{
+    transform: translateY(0);
+}
+
+.message.error{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.message.success{
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.status-user{
+    width: 13px;
+    height: 13px;
+    display: block;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.status-user.online{
+    background: #0CB53B;
+}
+
+.status-user.blur{
+    background: orange;
+}
+
+.status-user.offline{
+    background: #fff;
+    border:2px solid #0CB53B;
+}
+
+@media screen and (min-width: 992px){
+  .desktop{
+        display: flex;
+    }
+
+  .mobile{
+        display: none;
+  }
+  
+  .custom-input{
+        font-size: 20px;
+        padding: 17.5px 20px;
+    }
+}

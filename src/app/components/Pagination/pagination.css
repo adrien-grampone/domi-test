@@ -1,0 +1,107 @@
+.pagination-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.pagination-nav .pagination-pages{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pagination-liste-chat .pagination-nav .pagination-pages{
+    width: 100%;
+    flex-wrap: unset;
+}
+
+.pagination-nav .pagination-pages .pagination-page,
+.pagination-nav .pagination-pages .pagination-ellipsis{
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 21.13px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: #000000;
+    background-color: #F1F1F1;
+}
+
+.pagination-nav .pagination-pages .pagination-page{
+    cursor: pointer
+}
+
+.pagination-nav .pagination-pages .pagination-page.active{
+    background-color: #D6D6D6;
+}
+
+.pagination-nav .pagination-pages .pagination-div{
+    cursor: pointer;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 21.13px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: #FFFFFF;
+    background-color: #BE1212;
+    border-radius: 27px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.pagination-nav .pagination-pages .pagination-div.next .icon.next{
+    transform: rotate(180deg);
+}
+
+.pagination-nav .pagination-pages .pagination-div .icon div{
+    display: flex;
+}
+
+.pagination-nav .pagination-pages .pagination-div.mobile{
+    display: flex;
+}
+
+.pagination-nav .pagination-pages .pagination-div.desktop{
+    display: none;
+}
+
+@media screen and (min-width: 992px){
+    .pagination-nav{
+        padding: 70px;
+        justify-content: center;
+    }
+
+    .pagination-nav .pagination-pages{
+        gap: 20px;
+    }
+
+    .pagination-nav .pagination-pages .pagination-div,
+    .pagination-nav .pagination-pages .pagination-page,
+    .pagination-nav .pagination-pages .pagination-ellipsis{
+        font-size: 18px;
+    }
+
+    .pagination-nav .pagination-pages .pagination-div.mobile{
+        display: none;
+    }
+
+    .pagination-nav .pagination-pages .pagination-div.desktop{
+        display: flex;
+    }
+
+    .pagination-liste-chat{
+        height: 100%;
+        display: flex;
+    }
+
+    .pagination-liste-chat .pagination-nav{
+        padding: 20px 15px 0;
+        display: flex;
+    }
+}

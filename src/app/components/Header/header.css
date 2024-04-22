@@ -1,0 +1,204 @@
+header{
+    background: #2D2C2C;
+    box-shadow: 0px 6px 10px rgba(54, 54, 54, 0.38);
+}
+
+header .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap:20px;
+}
+
+header .wrapper .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+header .wrapper .btn{
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+header .wrapper .right-header{
+    display: flex;
+    align-items: center;
+    gap:32px;
+}
+
+header .bottom-bar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #323232;
+    box-shadow: 0px 6px 10px rgba(54, 54, 54, 0.38);
+    width: 100%;
+    height: 68px;
+    z-index: 2;
+}
+
+header .bottom-bar .wrapper{
+    padding:0 30px;
+    height: 100%;
+}
+
+header .bottom-bar .wrapper .item-menu{
+    position: relative;
+}
+
+header .bottom-bar .wrapper .item-menu:not(.active) svg path{
+    fill:#939393;
+}
+
+header .bottom-bar .wrapper .item-menu .notif{
+    position: absolute;
+    right: -10px;
+    bottom:0px;
+    padding: 0px 5px 2px;
+    background: var(--rouge);
+    border-radius: 17px;
+    font-weight: 500;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+header .bottom-bar .wrapper .item-menu svg{
+    width: 26px;
+}
+
+header .bottom-bar .wrapper figure img{
+    border-radius: 100%;
+}
+
+@media screen and (min-width: 992px){
+    header .wrapper{
+        padding:0 80px 0 20px;
+        align-items: stretch;
+        max-height: 100px;
+    }
+
+    header .wrapper .logo{
+        padding:20px 0;
+        min-width: 110px;
+    }
+
+    header .wrapper .right-header{
+        display: block;
+    }
+
+    header .wrapper .right-header .menu.desktop{
+        display: flex;
+        align-items: center;
+        gap:32px;
+    }
+
+    header .wrapper .right-header .wrapper-right-header{
+        display: flex;
+        gap: 20px;
+        height: 100%;
+    }
+
+    header .wrapper .right-header .menu.desktop{
+        height: 100%;
+        gap:10px;
+    }
+
+    header .wrapper .right-header .item-menu{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding:0 20px;
+    }
+
+    header .wrapper .right-header .item-menu.active{
+        background: #000;
+    }
+
+    header .wrapper .btn{
+        align-self: center;
+        font-size: 15px;
+    }
+
+    header .wrapper .right-header .item-menu{
+        text-decoration: none;
+    }
+
+    header .wrapper .right-header .item-menu svg{
+        width: 15px;
+    }
+
+    header .wrapper .right-header .item-menu label{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
+        text-decoration: none;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    header .wrapper .right-header .item-menu .notif{
+        position: absolute;
+        right: -10px;
+        top:-15px;
+        padding: 0px 5px 2px;
+        background: var(--rouge);
+        border-radius: 17px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    header .wrapper figure{
+        align-self: center;
+    }
+
+    header .wrapper figure img{
+        border-radius: 100%;
+    }
+
+    header .wrapper .profil{
+        align-self: center;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    header .wrapper .logo{
+        padding: 20px 0;
+        min-width: 150px;
+    }
+
+    header .wrapper .btn{
+        align-self: center;
+        font-size: 18px;
+    }
+
+    header .wrapper .right-header .item-menu label{
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    header .wrapper .right-header .item-menu svg{
+        width: 23px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    header .wrapper .right-header .item-menu label{
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    header .wrapper .right-header .wrapper-right-header{
+        gap:40px;
+    }
+}

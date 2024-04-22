@@ -1,0 +1,325 @@
+.page-register .wrapper-form .custom-form .custom-input:not(:first-child){
+    margin-top: 25px;
+}
+
+.page-register .wrapper-form .step{
+    margin-top:15px;
+    font-size: 12px;
+    letter-spacing: 0.11em;
+    color: #000000;
+}
+
+.page-register .wrapper-form .custom-form{
+    margin-top: 35px;
+}
+
+.wrapper-form .custom-form fieldset{
+    margin: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.wrapper-form .custom-form fieldset.cgu{
+    margin-top:25px;
+}
+
+.wrapper-form .custom-form fieldset .input-wrapper{
+    position: relative;
+}
+
+.wrapper-form .custom-form fieldset input[type=checkbox]{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    border:3px solid #000;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.wrapper-form .custom-form fieldset .input-wrapper svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    opacity: 0;
+    width: 23px;
+    height: 23px;
+    padding: 5Px;
+    transition: opacity 0.3s;
+}
+
+.wrapper-form .custom-form fieldset input[type=checkbox]:checked + svg{
+    opacity: 1;
+}
+
+.wrapper-form .custom-form fieldset input[type=checkbox]:checked{
+    border-color: var(--rouge);
+}
+
+.wrapper-form .custom-form fieldset label{
+    width: calc(100% - 23px);
+    cursor: pointer;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.11em;
+}
+
+.wrapper-form .custom-form fieldset label a{
+    color:#000;
+    font-weight: 600;
+}
+
+.wrapper-form .boutons .back{
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    color: var(--grisclair);
+    cursor: pointer;
+}
+
+.wrapper-form .custom-form fieldset.checkboxs-wrapper{
+    align-items: center;
+}
+
+.wrapper-form .custom-form fieldset .checkbox-wrapper{
+    border: 3px solid var(--rouge);
+    position: relative;
+    cursor: pointer;
+    padding: 6px 7px;
+    min-width: 102px;
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
+}
+
+.wrapper-form .custom-form fieldset .checkbox-wrapper:has(input:checked){
+    background-color: var(--rouge);
+}
+
+.wrapper-form .custom-form fieldset .checkbox-wrapper input{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    flex: 1;
+    cursor: pointer;
+}
+
+.wrapper-form .custom-form fieldset .checkbox-wrapper label{
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+
+.wrapper-form .custom-form fieldset .checkbox-wrapper input:checked + label{
+    color: #fff;
+}
+
+.wrapper-form .custom-form .custom-input.select-wrapper{
+    position: relative;
+    padding: 22px 20px;
+    cursor: pointer;
+}
+
+.wrapper-form .custom-form .custom-input.select-wrapper select{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border:0;
+    padding: 0 20px;
+    outline: 0;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--grisclair2);
+    cursor: pointer;
+    z-index: 2;
+    background: transparent;
+}
+
+.wrapper-form .custom-form .custom-input.select-wrapper svg{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wrapper-form .custom-form .custom-input.select-wrapper.multi-select select{
+    opacity: 0;
+}
+
+.wrapper-form .custom-form .custom-input.select-wrapper.multi-select label{
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--grisclair2);
+    position: absolute;
+}
+
+.page-register .wrapper-form .custom-form .liste-choix{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap:20px;
+    flex-wrap: wrap;
+}
+
+.page-register .wrapper-form .custom-form .liste-choix span{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 20px;
+    gap: 10px;
+    background: var(--rouge);
+    border-radius: 29px;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+    color:#fff;
+}
+
+.page-register .wrapper-form .custom-form .liste-choix span button{
+    background: rgba(91, 91, 91, 0.66);
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    padding: 5px;
+}
+
+.page-register .wrapper-form .custom-form.last-step{
+    margin-top:7rem;
+}
+
+.page-register .wrapper-form .custom-form .inscription-info{
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.11em;
+    color: #000000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.page-register .wrapper-form .custom-form .info-mail{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    margin-top:30px;
+    justify-content: center;
+}
+
+.page-register .wrapper-form .custom-form .info-mail svg{
+    width:40px;
+    min-width: 40px;
+}
+
+.page-register .wrapper-form .custom-form .info-mail span{
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.11em;
+    color: #535353;
+}
+
+@media screen and (min-width: 992px){
+    .page-register .wrapper-form .step{
+        margin-top:30px;
+        font-size: 20px;
+    }
+
+    .page-register .wrapper-form .custom-form{
+        margin-top:70px;
+    }
+
+    .page-register .wrapper-form .custom-form .custom-input:not(:first-child),
+    .page-register .wrapper-form .custom-form .liste-choix{
+        margin-top:35px;
+    }
+
+    .wrapper-form .custom-form fieldset{
+        align-items: flex-start;
+        gap:30px;
+    }
+
+    .wrapper-form .custom-form fieldset.cgu{
+        margin-top:45px;
+    }
+
+    .wrapper-form .custom-form fieldset input[type=checkbox]{
+        width: 35px;
+        height: 35px;
+    }
+
+    .wrapper-form .custom-form fieldset label{
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .wrapper-form .custom-form fieldset .input-wrapper svg{
+        width: 35px;
+        height: 35px;
+    }
+
+    .wrapper-form .boutons .back{
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        text-decoration-line: underline;
+        color: #A5A5A5;
+    }
+
+    .wrapper-form .custom-form fieldset .checkbox-wrapper{
+        padding:20px 17px;
+    }
+
+    .wrapper-form .custom-form fieldset .checkbox-wrapper label{
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .wrapper-form .custom-form .custom-input.select-wrapper{
+        padding:29px 30px;
+    }
+
+    .page-register .wrapper-form .custom-form .inscription-info{
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    .page-register .wrapper-form .custom-form.last-step{
+        margin-top:12rem;
+    }
+
+    .page-register .wrapper-form .custom-form .info-mail{
+        margin-top:20px;
+        gap:30px;
+    }
+
+    .page-register .wrapper-form .custom-form .info-mail svg{
+        width:60px;
+        min-width: 60px;
+    }
+
+    .page-register .wrapper-form .custom-form .info-mail span{
+        font-size: 24px;
+        line-height: 35px;
+        align-items: center;
+        letter-spacing: 0.11em;
+        max-width: 371px;
+    }
+
+}

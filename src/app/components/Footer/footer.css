@@ -1,0 +1,40 @@
+footer.footer{
+    padding:15.5px 20px;
+    background: #1D1D1D;
+    box-shadow: 0px -3px 10px rgba(54, 54, 54, 0.38);
+}
+
+footer .wrapper{
+    display: flex;
+    gap:20px;
+    justify-content: space-between;
+}
+
+footer .wrapper a{
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 11px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px){
+
+    footer.footer{
+        padding: 19.5px 40px;
+    }
+
+    footer .wrapper a{
+        font-size: 18px;
+        line-height: 21px;
+    }
+}
+
+@media screen and (min-width: 992px){
+
+    footer.footer{
+        padding: 19.5px 70px;
+    }
+}

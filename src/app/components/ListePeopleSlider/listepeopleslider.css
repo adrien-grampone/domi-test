@@ -1,0 +1,137 @@
+
+.liste-people-slider{
+    width: 100%;
+    display: flex;
+    background-color: var(--blanc);
+}
+
+.liste-people-slider .slick-slider,
+.liste-people-slider .slick-list,
+.liste-people-slider .slick-track{
+    width: 100%;
+    display: flex;
+}
+
+.liste-people-slider .slick-slider{
+    overflow: hidden;
+}
+
+.liste-people-slider .container-next-prev{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px;
+    border: 1px solid rgba(232, 232, 232, 1);
+    box-shadow: unset;
+    border-bottom: 2px solid rgba(232, 232, 232, 1);
+}
+
+.liste-people-slider .container-next-prev .arrow-custom-slick{
+    width: 20px;
+    height: 20px;
+    background-color: rgba(91, 91, 91, 0.66);
+    border-radius: 100%;
+    position: relative;
+}
+
+.liste-people-slider .container-next-prev .arrow-custom-slick.prev::after,
+.liste-people-slider .container-next-prev .arrow-custom-slick.next::after{
+    border-top: 7px solid var(--blanc);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(60%, -50%);
+    rotate: 90deg;
+    content: "";
+}
+
+.liste-people-slider .container-next-prev .arrow-custom-slick.next::after{
+    rotate: -90deg;
+    transform: translate(-60%, -50%);
+    left: unset;
+    right: 0;
+}
+
+.liste-people-slider .slick-list .slick-track{
+    width: 100%;
+    display: flex;
+}
+
+
+.liste-people{
+    width: 100%;
+}
+
+.liste-people-slider .people{
+    display: flex!important;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid rgba(232, 232, 232, 1);
+    box-shadow: unset;
+    border-bottom: 2px solid rgba(232, 232, 232, 1);
+    width: 100% !important;
+}
+
+.liste-people-slider .people .people-image{
+    display: flex;
+    position: relative;
+}
+
+.liste-people-slider .people .people-image img{
+    width: 39px;
+    height: 41px;
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+}
+
+.liste-people-slider .people .people-image.connected::after{
+    content: "";
+    position: absolute;
+    right: 4px;
+    bottom: 0;
+    width: 6.5px;
+    height: 6.5px;
+    border-radius: 100%;
+    background-color: var(--vert);
+}
+
+.liste-people-slider .people .people-info{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.liste-people-slider .people .people-info .people-name{
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0px;
+}
+
+.liste-people-slider .people .people-info .people-info-perso {
+    font-size: 8px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    line-height: 10px;
+    letter-spacing: 0.5px;
+    color: var(--grisclaire3);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.liste-people-slider .people .people-info .people-info-perso .ville{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}

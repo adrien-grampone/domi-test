@@ -1,0 +1,127 @@
+.wrapper-form{
+    height: calc(100vh - 185px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0 20px;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.wrapper-form::-webkit-scrollbar{
+    display: none;
+}
+
+.wrapper-form h1{
+    margin:20px 0 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.wrapper-form .custom-form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    width: 100%;
+    margin-top: 50px;
+    max-width: 500px;
+    gap: 30px;
+}
+
+.wrapper-form .custom-form .custom-input:not(:first-child){
+    margin-top: 50px;
+}
+
+.wrapper-form .custom-form .forgot-password{
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    color: var(--gris);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper-form .boutons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.wrapper-form .boutons .inscription-link p,
+.wrapper-form .boutons .inscription-link p a{
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    color: var(--grisclair);
+}
+
+.wrapper-form .boutons .inscription-link p a{
+    text-decoration: underline;
+}
+
+.wrapper-form .info-success{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:5rem;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+@media screen and (min-width: 992px){
+    .wrapper-form{
+        width: 50%;
+        height: 100vh;
+    }
+
+    .wrapper-form .custom-form{
+        max-width: 600px;
+        padding-bottom: 65px;
+        margin-top: 100px;
+    }
+
+    .wrapper-form h1{
+        font-size:45px;
+        margin-top: 8rem;
+        line-height: 55px;
+    }
+
+    .wrapper-form .custom-form .custom-input:not(:first-child){
+        margin-top: 30px;
+    }
+
+    .wrapper-form .custom-form .forgot-password{
+        margin-top:60px;
+        font-size: 18px;
+    }
+
+    .wrapper-form .boutons .inscription-link{
+        display: none;
+    }
+
+    .wrapper-form .boutons .btn{
+        font-size: 25px;
+        padding: 22px 66px;
+        min-width: 304px;
+    }
+
+    .wrapper-form .info-success{
+        font-size: 18px;
+        max-width: 515px;
+        margin-top: 10rem;
+    }
+
+}

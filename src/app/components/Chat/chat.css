@@ -1,0 +1,360 @@
+.page-chat .page{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.page-chat .page:has(.conversation-wrapper.active){
+    height: calc(100vh - 153.5px);
+}
+
+.page-chat .page:has(.conversation-wrapper.active) .sidebar-wrapper{
+    display: none;
+}
+
+.page-chat .page .conversation-wrapper{
+    display: none;
+}
+
+.page-chat .page .conversation-wrapper.active{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.page-chat .page .conversation-wrapper .conversation-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 3px solid #EBEBEB;
+}
+
+.page-chat .page .conversation-wrapper .conversation-header .left,
+.page-chat .page .conversation-wrapper .conversation-header .pdp-infos{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.page-chat .page .conversation-wrapper .conversation-header .left .goback{
+    cursor: pointer;
+}
+
+.page-chat .page .conversation-wrapper .conversation-header .left img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.page-chat .page .conversation-wrapper .conversation-header .pdp-infos .infos h1{
+    margin:0;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #464646;
+}
+
+.page-chat .page .conversation-wrapper .conversation-header .pdp-infos .infos p{
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    color: #949494;
+    margin:5px 0 0;
+}
+
+.page-chat .page .conversation-wrapper .wrapper-messages{
+    padding:0 20px;
+    background: #F8F8F8;
+    height: 100%;
+}
+
+.page-chat .page .conversation-wrapper.no-conversation .wrapper-messages{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.page-chat .page .conversation-wrapper.no-conversation .wrapper-messages h1{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.05em;
+    color: #C6C6C6;
+}
+
+.page-chat .page .conversation-wrapper .wrapper-messages .messages{
+    padding:10px 0;
+}
+
+.page-chat .page .conversation-wrapper .wrapper-messages .messages > div{
+    padding:10px 0;
+}
+
+.page-chat .page .conversation-wrapper .wrapper-messages .messages .date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    color: rgba(57, 57, 57, 0.4);
+}
+
+.page-chat .page .conversation-wrapper .wrapper-messages .messages .message-conversation{
+    display: flex;
+    align-items: flex-start;
+    gap:10px;
+    max-width: 96%;
+}
+
+.page-chat .page .conversation-wrapper .wrapper-messages .messages .message-conversation.from{
+    flex-direction: row-reverse;
+    margin-left: auto;
+}
+
+.page-chat .page .conversation-wrapper .wrapper-messages .messages .message-conversation .pp{
+    margin-top: 22px;
+}
+
+.page-chat .page .conversation-wrapper .wrapper-messages .messages .message-conversation .pp .pdp{
+    border-radius: 50%;
+}
+
+.page-chat .page .conversation-wrapper .wrapper-messages .messages .message-conversation.from .content-time{
+    text-align: right;
+}
+
+.page-chat .page .conversation-wrapper .wrapper-messages .messages .message-conversation .content-time .time{
+    font-family: WorkSans, sans-serif;
+    font-size: 10px;
+    line-height: 12px;
+    color: #646464;
+}
+
+
+.page-chat .page .conversation-wrapper .wrapper-messages .messages .message-conversation .content-time .content{
+    margin-top:5px;
+    padding: 8px 10px;
+    background: #A8A8A8;
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.page-chat .page .conversation-wrapper .wrapper-messages .messages .message-conversation.from .content-time .content{
+    background: var(--rouge);
+}
+
+.page-chat .page .conversation-wrapper .conversation-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: #F8F8F8;
+    box-shadow: 0px 0px 8px rgba(99, 99, 99, 0.12);
+}
+
+.page-chat .page .conversation-wrapper .conversation-footer .wrapper{
+    display: flex;
+    align-items: center;
+    gap:12px;
+}
+
+.page-chat .page .conversation-wrapper .conversation-footer .wrapper .btn-conv{
+    min-width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(99, 99, 99, 0.12);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.page-chat .page .conversation-wrapper .conversation-footer .wrapper .btn-conv > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-chat .page .conversation-wrapper .conversation-footer .wrapper .input-wrapper,
+.page-chat .page .conversation-wrapper .conversation-footer .wrapper .react-emoji{
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 0px 8px rgba(99, 99, 99, 0.12);
+    background: #FFFFFF;
+    border-radius: 46px;
+}
+
+.page-chat .page .conversation-wrapper .conversation-footer .wrapper .react-emoji .react-input-emoji--container{
+    border:0;
+}
+
+.page-chat .page .conversation-wrapper .conversation-footer .wrapper input,
+.page-chat .page .conversation-wrapper .conversation-footer .wrapper .react-emoji .react-input-emoji--input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 6.5px 12px;
+}
+
+.page-chat .page .conversation-wrapper .conversation-footer .wrapper input,
+.page-chat .page .conversation-wrapper .conversation-footer .wrapper .react-emoji .react-input-emoji--input{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #464646;
+}
+
+.page-chat .page .conversation-wrapper .conversation-footer .wrapper input::placeholder,
+.page-chat .page .conversation-wrapper .conversation-footer .wrapper .react-emoji .react-input-emoji--placeholder{
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #C7C2C2;
+}
+
+.page-chat .page .conversation-wrapper .conversation-footer .input-wrapper .emoji{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-12px, -50%);
+    display: flex;
+    cursor: pointer;
+}
+
+.page-chat .page .conversation-wrapper .conversation-footer .wrapper .react-emoji .react-input-emoji--button{
+    margin-right: 12px;
+}
+
+.page-chat .page .conversation-wrapper .conversation-footer .input-wrapper .emoji > div{
+    display:flex;
+}
+
+@media screen and (min-width: 992px){
+    .page-chat .page:has(.conversation-wrapper.active) .sidebar-wrapper{
+        display: block;
+    }
+
+    .page-chat .page .conversation-wrapper{
+        position: relative;
+        transform: translateX(0);
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .page-chat .page .conversation-wrapper.no-conversation .conversation-header,
+    .page-chat .page .conversation-wrapper.no-conversation .conversation-footer{
+        display: none;
+    }
+
+    .page-chat .page .conversation-wrapper .conversation-header{
+        padding:15.5px 20px;
+    }
+
+    .page-chat .page .conversation-wrapper .conversation-header .left .pdp{
+        width: 66px;
+        height: 66px;
+    }
+
+    .page-chat .page .conversation-wrapper .conversation-header .pdp-infos .infos h1{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .page-chat .page .conversation-wrapper .conversation-header .pdp-infos .infos p{
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .page-chat .page .conversation-wrapper .conversation-header .left .goback{
+        display: none;
+    }
+
+    .page-chat .page .conversation-wrapper .wrapper-messages .messages .message-conversation .pp .pdp{
+        width:43px;
+        height: 43px;
+    }
+
+    .page-chat .page .conversation-wrapper .wrapper-messages .messages .message-conversation .content-time .time{
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .page-chat .page .conversation-wrapper .wrapper-messages .messages .message-conversation .content-time .content{
+        padding: 10px 18px;
+        border-radius: 20px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.05em;
+        margin-top:10px;
+    }
+
+    .page-chat .page .conversation-wrapper .wrapper-messages .messages .message-conversation .pp{
+        margin-top:28px;
+    }
+
+    .page-chat .page .conversation-wrapper .conversation-footer .wrapper .btn-conv{
+        min-width: 79px;
+        height: 79px;
+    }
+
+    .page-chat .page .conversation-wrapper .conversation-footer .wrapper .btn-conv svg{
+        width: 37px;
+        height: 37px;
+    }
+
+    .page-chat .page .conversation-wrapper .conversation-footer .wrapper input,
+    .page-chat .page .conversation-wrapper .conversation-footer .wrapper .react-emoji .react-input-emoji--input{
+        font-size: 24px;
+        line-height: 28px;
+        padding: 25.5px 35px;
+    }
+
+    .page-chat .page .conversation-wrapper .conversation-footer .wrapper input::placeholder,
+    .page-chat .page .conversation-wrapper .conversation-footer .wrapper .react-emoji .react-input-emoji--placeholder{
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .page-chat .page .conversation-wrapper .conversation-footer .input-wrapper .emoji{
+        transform: translate(-30px, -50%);
+    }
+
+    .page-chat .page .conversation-wrapper .conversation-footer .wrapper .react-emoji .react-input-emoji--button{
+        margin-right: 20px;
+    }
+
+    .page-chat .page .conversation-wrapper .conversation-footer .input-wrapper .emoji svg,
+    .page-chat .page .conversation-wrapper .conversation-footer .wrapper .react-emoji .react-input-emoji--button svg{
+        width: 37px;
+        height: 37px;
+    }
+
+    .page-chat .page .conversation-wrapper .conversation-footer{
+        box-shadow: unset;
+    }
+
+    .page-chat .page{
+        height: calc(100vh - 100px) !important;
+    }
+
+}

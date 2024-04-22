@@ -1,0 +1,9 @@
+@media screen and (min-width: 992px){
+    .wrapper-log{
+        display: flex;
+    }
+
+    .page-register .wrapper-log{
+        flex-direction: row-reverse;
+    }
+}
